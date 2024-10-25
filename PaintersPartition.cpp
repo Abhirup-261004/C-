@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-bool isPossible(vector<int>&nums,int n,int m,int maxAllotedTime){//To chcek whether mid is possible or not
+bool isPossible(vector<int>nums,int n,int m,int maxAllotedTime){//To chcek whether mid is possible or not
     int pt=1,units=0;
     for(int i=0;i<n;i++){
         if(nums[i]>maxAllotedTime){
@@ -27,9 +27,9 @@ int painterPartition(vector<int>&nums,int n,int m){// Function to calculate the 
     int sum=0,maxVal=0;
     for(int i=0;i<n;i++){ 
         sum+=nums[i];
-        maxVal=max(maxVal,nums[i]);
+        
     }
-    int st=maxVal,end=sum,ans=-1;
+    int st=0,end=sum,ans=-1;
     while(st<=end){
         int mid=st+(end-st)/2;
         if(isPossible(nums,n,m,mid)){ //If mid is valid We check towards left for smaller value
