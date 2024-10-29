@@ -3,8 +3,9 @@
 #include<vector>
 using namespace std;
 
-vector<int > bubbleSort(vector<int>&nums){//O(n^2)
+void bubbleSort(vector<int>&nums){//O(n^2)
     int n=nums.size();
+    bool isSwap=false;
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-i-1;j++){
             if(nums[j]>nums[j+1]){
@@ -12,13 +13,15 @@ vector<int > bubbleSort(vector<int>&nums){//O(n^2)
             }
         }
     }
-    return nums;
+    if(!isSwap){//if alraedy sorted
+        return;
+    }
 }
 
 int main(){
     vector<int>nums={4,1,5,2,3};
     cout<< "After sorting:";
-    nums=bubbleSort(nums);
+    bubbleSort(nums);
     for(int val:nums){
         cout<< val<<" ";
     }
