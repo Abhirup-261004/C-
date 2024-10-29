@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-vector<int > bubbleSort(vector<int>&nums){
+vector<int > bubbleSort(vector<int>&nums){//O(n^2)
     int n=nums.size();
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-i-1;j++){
