@@ -1,27 +1,17 @@
 #include<iostream>
 #include<vector>
 #include<list>
+#include<deque>
 using namespace std;
 
 int main(){
-    list<int>l;
-    l.emplace_back(1);
-    l.push_back(2);
-    l.push_front(3);
-    l.emplace_front(5);
+    pair<int,char>p={1,'a'};
+    cout<<p.first<<endl;//1
+    cout<<p.second<< endl;//a
 
-    for(int val:l){
-        cout<< val<<" ";
-    }
-    cout<< endl;
-
-    l.pop_back();
-    l.pop_front();
-
-    
-    for(int val:l){
-        cout<< val<<" ";
-    }
-    cout<< endl;
+    pair<string,pair<string,int>>p2={"Abhirup",{"Nandi",20}};
+    cout<<p2.first<<endl;//Abhirup
+    cout<<p2.second.first<<endl;//Nandi
+    cout<<p2.second.second<<endl;//20
     return 0;
 }
