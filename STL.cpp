@@ -1,16 +1,28 @@
 #include<iostream>
+#include<bits/stdc++.h>
 #include<vector>
 #include<list>
 #include<deque>
 #include<stack>
 #include<queue>
 #include<map>
+#include<set>
 using namespace std;
+
+bool comparator(pair<int,int>p1,pair<int,int>p2){
+    if(p1.second<p2.second) return true;
+    else return false;
+
+    if(p1.first<p2.first) return true;
+    else return false;
+
+}
 
 int main(){
 
     //Vector with pairs
-    vector<pair<int,int>>vec={{1,2},{3,4},{5,6}};
+    vector<pair<int,int>>vec={{1,2},{3,4},{5,6},{2,3}};
+    sort(vec.begin(),vec.end(),comparator);
     for(auto p:vec){
         cout<<p.first<<" "<<p.second<<endl;
     }
@@ -95,6 +107,30 @@ int main(){
     }
 
     cout<<endl;
+
+    //Set
+    //Unique and sorted values
+
+    set<int>set;
+    set.insert(3);
+    set.insert(2);
+    set.insert(5);
+    set.insert(1);
+    set.insert(4);
+
+    set.insert(1);
+    set.insert(2);
+    set.insert(3);
+
+    cout<<"Size:"<<set.size()<<endl;//5 as all elements are unique
+
+    for(auto val:set){
+        cout<<val<<" ";
+    }
+
+    cout<<endl;
+
+
 
     return 0;
 }
