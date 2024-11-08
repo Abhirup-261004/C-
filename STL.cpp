@@ -18,7 +18,8 @@ int main(){
     for(auto p:vec){
         cout<<p.first<<" "<<p.second<<endl;
     }
-
+    
+    // Stack: Last in; Last out
     stack<int>s;
     s.push(1);
     s.push(2);
@@ -27,6 +28,10 @@ int main(){
 
     cout<<s.top()<<endl;
     cout<<s.size()<<endl;
+    while(!s.empty()){
+        cout<<"top: "<<s.top()<<endl;
+        s.pop();
+    }
 
     return 0;
 }
