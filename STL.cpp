@@ -21,17 +21,21 @@ int main(){
     
     // Stack: Last in; Last out
     stack<int>s;
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
+    s.push(1);//top
+    s.push(2);//top
+    s.push(3);//top
+    s.push(4);//top
 
     cout<<s.top()<<endl;
     cout<<s.size()<<endl;
-    while(!s.empty()){
-        cout<<"top: "<<s.top()<<endl;
-        s.pop();
-    }
-
+    // while(!s.empty()){
+    //     cout<<"top: "<<s.top()<<endl;
+    //     s.pop();
+    // }
+    cout<< endl;
+    stack<int>s2;
+    s2.swap(s);
+    cout<<"Size of s:"<<s.size()<< endl;//0
+    cout<<"Size of s2:"<<s2.size()<<endl;//4
     return 0;
 }
