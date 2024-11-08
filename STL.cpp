@@ -4,6 +4,7 @@
 #include<deque>
 #include<stack>
 #include<queue>
+#include<map>
 using namespace std;
 
 int main(){
@@ -55,5 +56,45 @@ int main(){
         cout<<"Current Front: "<<q.front()<<endl;
         q.pop();//Popped in the same order as pushed
     }
+
+    cout<<endl;
+    cout<<endl;
+
+    //Priority Queue
+
+    priority_queue<int>pq;//Largest value has top priority
+    pq.push(45);
+    cout<<pq.top()<<endl;//45
+    pq.push(56);
+    cout<<pq.top()<<endl;//56
+    pq.push(10);
+    cout<<pq.top()<<endl;//56
+    cout<<endl;
+
+    //Maps
+
+    map<string,int>m;
+    m["Tv"]=100;//key is unique .It cannot be changed but the value can be changed
+    m["laptop"]=50;
+    m["Camera"]=200;
+
+    m.insert({"watch",150});
+    m.emplace("headphone",45);
+
+    
+
+    for(auto p:m){
+        cout<<p.first<<" "<<p.second<<endl;//Sorted in ascending order
+    }
+
+    cout<<m.count("laptop")<<endl;
+    m.erase("tv");
+
+    for(auto p:m){
+        cout<<p.first<<" "<<p.second<<endl;//Sorted in ascending order
+    }
+
+    cout<<endl;
+
     return 0;
 }
