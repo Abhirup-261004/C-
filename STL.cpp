@@ -3,6 +3,7 @@
 #include<list>
 #include<deque>
 #include<stack>
+#include<queue>
 using namespace std;
 
 int main(){
@@ -37,5 +38,22 @@ int main(){
     s2.swap(s);
     cout<<"Size of s:"<<s.size()<< endl;//0
     cout<<"Size of s2:"<<s2.size()<<endl;//4
+
+    // Queue
+
+    queue<int>q;
+
+    q.push(1);
+    q.push(2);
+    q.push(3);
+
+    cout<<"Front: "<<q.front()<<endl;//1
+
+    cout<<"Size: "<<q.size()<<endl;//3
+
+    while(!q.empty()){
+        cout<<"Current Front: "<<q.front()<<endl;
+        q.pop();//Popped in the same order as pushed
+    }
     return 0;
 }
