@@ -1,11 +1,18 @@
 #include<iostream>
 #include<bits/stdc++.h>
+#include<string>
 using namespace std;
 
 int main(){
-    char str[100];
-    cout<< "Enter a string:";
-    cin.getline(str,100,'.');//Stops taking input at '.'
-    cout<< str<<endl;
-    return 0;
+    string str="Abhirup Nandi";
+
+    //Loops on string
+    for(int i=0;i<str.length();i++){
+        cout<<str[i]<<" ";
+    }
+    cout<<endl;
+    for(char ch:str){
+        cout<< ch<< " ";
+    }
+    cout<< endl;
 }
