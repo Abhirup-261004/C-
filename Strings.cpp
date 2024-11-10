@@ -15,4 +15,7 @@ int main(){
         cout<< ch<< " ";
     }
     cout<< endl;
+    reverse(str.begin(),str.end());
+    cout<< str<<endl;
+    return 0;
 }
