@@ -36,3 +36,10 @@ bool chechInclusion(string s1,string s2){
     }
     return false;
 }
+
+int main(){
+    string s1="ab";
+    string s2="eidbaooo";
+    cout<< checkInclusion(s1,s2);
+    return 0;
+}
