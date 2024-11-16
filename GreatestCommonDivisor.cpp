@@ -15,9 +15,18 @@ int gcd(int a,int b){
     return a;
 }
 
+int recGCD(int a,int b){
+    if(a==0){
+        return b;
+    }
+    return recGCD(b%a,a);
+}
+
 int main(){
     int a=36,b=54;
     cout<< "GCD is: "<< gcd(a,b)<< endl;
+
+    cout<< "GCD is: "<< recGCD(a,b)<< endl;
 
     return 0;
 }
