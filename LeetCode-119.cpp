@@ -13,11 +13,11 @@ vector<int> getRow(int rowIndex) {
     return res;
 }
 int main(){
-    int r=3;
-    <vector<int>ans=getRow(r);
+    int r=4;
+    vector<int>ans=getRow(r);
 
     for(int a:ans){
-        cout<< a;
+        cout<< a<<" ";
     }
     cout<<endl;
 }
