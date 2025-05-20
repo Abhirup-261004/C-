@@ -31,5 +31,5 @@ int main(){
     vector<vector<int>> grid ={{0,3,6},{5,8,1},{2,7,4}};
 
     cout<<checkValidGrid(grid)<<endl;
-    
+    return 0;
 }
