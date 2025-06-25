@@ -8,7 +8,7 @@ int main(){
 
     //Next Greater Element
     stack<int>s;
-    vector<int>ans;
+    vector<int>ans(arr.size(),0);
     int n=arr.size();
     for(int i=n-1;i>=0;i--){
         while(s.size()>0 && s.top()<=arr[i]){
