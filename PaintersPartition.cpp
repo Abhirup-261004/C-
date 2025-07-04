@@ -36,7 +36,7 @@ int painterPartition(vector<int>&nums,int n,int m){// Function to calculate the 
             ans=mid;
             end=mid-1;
         }else{ // If mid is invalid we check towards right for larger value which would be valid
-            end=mid+1;
+            st=mid+1;
         }
     }
     return ans;
